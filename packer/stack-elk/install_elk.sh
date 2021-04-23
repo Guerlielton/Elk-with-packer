@@ -1,12 +1,12 @@
 #!/bin/bash
 
-#add swap para micro
+echo "Adicionando swap para Ec2 micro"
 sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=2048 count=1048576
 sudo /sbin/mkswap /var/swap.1
 sudo chmod 600 /var/swap.1
 sudo /sbin/swapon /var/swap.1
 sudo echo "/var/swap.1   none   swap  sw  0  0" | sudo tee -a /etc/fstab
-
+echo "#######################################"
 
 echo " Instalando o Java e o Nginx"
 
