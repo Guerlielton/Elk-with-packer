@@ -4,3 +4,4 @@
 *.json
 *.tfvars
 variables.tf
+terraform-docs
