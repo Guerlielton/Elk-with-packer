@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#Autor: Guerlielton Campos
 echo "Iniciando o Elasticsearch"
 sudo systemctl daemon-reload 
 sudo systemctl enable elasticsearch
@@ -15,11 +15,12 @@ sudo systemctl status kibana
 echo "################################"
 
 echo "Testando o arquivo de input"
-sudo /usr/share/logstash/bin/logstash -f log-input.conf --config.test_and_exit
+#teste da configuração que e enviada no processo de build da imagem
+sudo /usr/share/logstash/bin/logstash -f log-input.conf --config.test_and_exit 
 echo "##############################"
-sudo filebeat test config -e
+sudo filebeat test config -e #teste da configurações do filebeat
 echo "##############################"
-sudo filebeat setup --dashboards
+sudo filebeat setup --dashboards #setup dos dashboards
 echo "##############################"
 
 echo "Iniciando o Filebeat"
