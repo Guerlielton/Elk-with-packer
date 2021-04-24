@@ -1,7 +1,7 @@
 # Stack Elk
 Projeto com hashicorp packer e terraform
 
-Objetivo do projeto coletar informações de logs da própria instância que será criada como também coletar logs de outras instâncias sendo necessário a instalação do filebeat nas máquinas clientes ao servidor. 
+Objetivo do projeto e coletar informações de logs da própria instância que será criada com o Elasticsearch como também coletar logs de outras instâncias sendo necessário a instalação do filebeat nas máquinas clientes. 
 
 Pré-requisitos para o projeto.
 
