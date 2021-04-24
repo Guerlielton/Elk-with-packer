@@ -17,7 +17,7 @@ resource "aws_security_group" "allow_traffic_elk" {
     to_port     = 5601
     protocol    = "tcp"
   }
-    ingress {
+  ingress {
     cidr_blocks = var.allow_from_cidrs
     description = "Allow port logstash"
     from_port   = 5044
