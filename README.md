@@ -14,7 +14,7 @@ Pré-requisitos para o projeto.
 Neste projeto estarei utilizando o packer e o terraform para criamos a imagem com o ELK, usando o packer iremos construir a imagem e instalar todos os componentes necessários para a stack do elasticsearch subir criando uma AMI Amazon machine image, depois com o terraform iremos construir toda a configuração de infra na aws.
 
 Aqui estão os link para instalação do packer,terraform e aws cli escolha o seu sistema operacional para instalação das ferramentas
-neste projeto utilizei o linux ubuntu para todas as configurações.
+neste projeto utilizei o linux ubuntu 20.04 para todas as configurações.
 ```
 https://docs.aws.amazon.com/cli/latest/userguide/install-cliv1.html
 https://www.terraform.io/downloads.html
