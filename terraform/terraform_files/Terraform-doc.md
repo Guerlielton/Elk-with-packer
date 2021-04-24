@@ -36,5 +36,5 @@
 
 | Name | Description |
 |------|-------------|
-| <a name="output_ec2instance"></a> [ec2instance](#output\_ec2instance) | Id da instance Ec2 |
-| <a name="output_ip"></a> [ip](#output\_ip) | Ip address da instance Ec2 |
+| <a name="output_ec2instance"></a> [ec2instance](#output\_ec2instance) | Id da instance EC2 |
+| <a name="output_ip"></a> [ip](#output\_ip) | Ip address da instance EC2 |
