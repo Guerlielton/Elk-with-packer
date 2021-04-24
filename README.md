@@ -21,8 +21,8 @@ https://www.terraform.io/downloads.html
 https://www.packer.io/downloads
 
 ```
-Após a instalação dos pacotes iremos seguir com o processo de configuração para o aws cli utilizando o comando ```aws configure``` ele ira solicitar o seu  acesse key e secret access key conforme abaixo
-
+Após a instalação dos pacotes iremos seguir com o processo de configuração para o aws cli utilizando o comando 
+```aws configure``` ele ira solicitar o seu  acesse key e secret access key e a região caso a região não seja passada podemos define em nosso codigo.
 ```
 aws configure
 AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
