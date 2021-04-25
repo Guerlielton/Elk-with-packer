@@ -23,3 +23,5 @@ AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
 AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 ```
 Após estes parâmetros serem informados o packer e o terraform conseguirá trabalhar de forma que não precisaremos passar esses dados sensíveis direto em nosso código.
+
+![](https://uploaddeimagens.com.br/images/003/212/624/original/Topologi.png?1619384461)
