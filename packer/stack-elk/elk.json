@@ -1,0 +1,79 @@
+{
+
+    "builders": [
+        {
+            "access_key": "{{user `aws_access_key`}}",
+            "ami_name": "ELK-CHALLENGE-{{timestamp}}",
+            "instance_type": "t2.micro",
+            "region": "us-east-1",
+            "secret_key": "{{user `aws_secret_key`}}",
+            "source_ami_filter": {
+              "filters": {
+              "virtualization-type": "hvm",
+              "name": "ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-20210224",
+              "root-device-type": "ebs"
+              },
+              "owners": ["099720109477"],
+              "most_recent": true
+            },
+            "ssh_username": "ubuntu",
+            "vpc_id": "Sua vpc id",
+            "subnet_id": "Sua subnet id",
+            "associate_public_ip_address": "true",
+            "type": "amazon-ebs"
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "script": "./install_elk.sh"
+        },
+        {
+            "type": "file",
+            "source": "./elasticsearch.yml",
+            "destination": "/home/ubuntu/"
+        },
+        {
+            "type": "file",
+            "source": "./kibana.yml",
+            "destination": "/home/ubuntu/"
+        },
+        {
+            "type": "file",
+            "source": "./filebeat.yml",
+            "destination": "/home/ubuntu/"
+        },
+        {
+            "type": "file",
+            "source": "./log-input.conf",
+            "destination": "/home/ubuntu/"
+        },
+        {
+            "type": "file",
+            "source": "./jvm.options",
+            "destination": "/home/ubuntu/"
+        },
+        {
+            "type": "file",
+            "source": "./startup-timeout.conf",
+            "destination": "/home/ubuntu/"
+        },
+        {
+            "type": "shell",
+            "inline":[
+                "ls -la /home/ubuntu",
+                "sudo cp /home/ubuntu/elasticsearch.yml /etc/elasticsearch/",
+                "sudo cp /home/ubuntu/kibana.yml /etc/kibana/",
+                "sudo cp /home/ubuntu/filebeat.yml /etc/filebeat/",
+                "sudo cp /home/ubuntu/log-input.conf /etc/logstash/conf.d/",
+                "sudo cp /home/ubuntu/jvm.options /etc/elasticsearch/jvm.options", 
+                "sudo mkdir /etc/systemd/system/elasticsearch.service.d",
+                "sudo cp /home/ubuntu/startup-timeout.conf /etc/systemd/system/elasticsearch.service.d/"
+            ]
+        },
+        {
+            "type": "shell",
+            "script": "./start_services.sh"
+        }
+    ]
+}

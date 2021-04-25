@@ -4,6 +4,13 @@ resource "aws_security_group" "allow_traffic_elk" {
   vpc_id      = aws_vpc.vpc.id
 
   ingress {
+    description = "Allow trafic"
+    self        = true
+    from_port   = 0
+    to_port     = 0
+    protocol    = -1
+  }
+  ingress {
     cidr_blocks = var.allow_from_cidrs
     description = "SSH to EC2"
     from_port   = 22
