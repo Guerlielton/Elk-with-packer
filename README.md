@@ -1,27 +1,17 @@
-# Stack Elk
-Projeto com hashicorp packer e terraform
+# Packer
 
-Objetivo do projeto e coletar informações de logs da própria instância que será criada com o Elasticsearch como também coletar logs de outras instâncias sendo necessário a instalação do filebeat nas máquinas clientes. 
+O HashiCorp Packer automatiza a criação de qualquer tipo de imagem de máquina. Ele adota o gerenciamento de configuração moderno, encorajando você a usar scripts automatizados para instalar e configurar o software nas imagens feitas pelo Packer. O Packer traz imagens de máquina para a era moderna, revelando potencial inexplorado e abrindo novas oportunidades.
 
-Pré-requisitos para o projeto.
+# Terraform
+Terraform é uma infraestrutura de código aberto como ferramenta de software de código que fornece um fluxo de trabalho CLI consistente para gerenciar centenas de serviços em nuvem. Terraform codifica APIs de nuvem em arquivos de configuração declarativos.
 
-- Packer
+# AWS 
 
-- Terraform
+Amazon Web Services oferece um amplo conjunto de produtos globais baseados em nuvem, incluindo computação, armazenamento, bancos de dados, análises, redes, dispositivos móveis, ferramentas de desenvolvedor, ferramentas de gerenciamento, IoT, segurança e aplicativos corporativos: sob demanda, disponível em segundos, com pagamento -como você vai preços. De armazenamento de dados a ferramentas de implantação, diretórios a entrega de conteúdo, mais de 175 serviços da AWS estão disponíveis. Novos serviços podem ser provisionados rapidamente, sem despesas de capital iniciais. Isso permite que empresas, start-ups, pequenas e médias empresas, e os clientes do setor público para acessar os blocos de construção de que precisam para responder rapidamente aos requisitos de negócios em constante mudança. Este white paper fornece uma visão geral dos benefícios da nuvem AWS e apresenta os serviços que compõem a plataforma.
 
-- Aws Cli
-
-Neste projeto estarei utilizando o packer e o terraform para criamos a imagem com o ELK, usando o packer iremos construir a imagem e instalar todos os componentes necessários para a stack do elasticsearch subir criando uma AMI Amazon machine image, depois com o terraform iremos construir toda a configuração de infra na aws.
-
-Aqui estão os link para instalação do [Packer](https://www.packer.io/downloads),[Terraform](https://www.terraform.io/downloads.html),[Aws cli](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv1.html) escolha o seu sistema operacional para instalação das ferramentas neste projeto utilizei o linux ubuntu 20.04 para todas as configurações.
-
-Após a instalação dos pacotes iremos seguir com o processo de configuração para o aws cli utilizando o comando 
-```aws configure``` ele irá solicitar o seu access key e secret access key e a região, caso a região não seja passada podemos definir em nosso código.
-```
-aws configure
-AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
-AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-```
-Após estes parâmetros serem informados o packer e o terraform conseguirá trabalhar de forma que não precisaremos passar esses dados sensíveis direto em nosso código.
-
+# Topologia 
+Abaixo está uma pequena topologia do projeto.
 ![](https://uploaddeimagens.com.br/images/003/212/624/original/Topologi.png?1619384461)
+
+# Documentação
+Toda a documentação do projeto esta contida na [Wiki](https://github.com/Guerlielton/Elk-with-packer/wiki)
