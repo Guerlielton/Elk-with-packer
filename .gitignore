@@ -2,7 +2,7 @@
 .terraform.lock*
 *tfstate*
 stack.json
-*.tfvars
 variables.tf
 terraform-docs
 ec2_web.tf
+terraform.tfvars
