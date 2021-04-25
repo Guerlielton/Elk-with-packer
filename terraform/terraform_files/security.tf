@@ -4,7 +4,7 @@ resource "aws_security_group" "allow_traffic_elk" {
   vpc_id      = aws_vpc.vpc.id
 
   ingress {
-    description = "Allow trafic"
+    description = "Allow trafic into SG"
     self        = true
     from_port   = 0
     to_port     = 0
