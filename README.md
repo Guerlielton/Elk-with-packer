@@ -11,7 +11,7 @@ Amazon Web Services oferece um amplo conjunto de produtos globais baseados em nu
 
 # Topologia 
 Abaixo está uma pequena topologia do projeto.
-![](https://uploaddeimagens.com.br/images/003/212/624/original/Topologi.png?1619384461)
+![](https://uploaddeimagens.com.br/images/003/213/042/original/Topology.png?1619442407)
 
 # Documentação
 Toda a documentação do projeto esta contida na [Wiki](https://github.com/Guerlielton/Elk-with-packer/wiki)
